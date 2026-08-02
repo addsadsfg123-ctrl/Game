@@ -85,23 +85,53 @@ function rollDice(){
 return Math.floor(Math.random()*20)+1;
 
 }
-
 function hide(){
 
-const roll = rollDice();
+const roll=rollDice();
 
-alert("🎲 Выпало: " + roll);
+const total=roll+player.agility;
 
-const total = roll + player.agility;
+if(total>=15){
 
-if(total >= 15){
+showMessage(
+`
+🎲 Выпало <b>${roll}</b><br><br>
+
+Ловкость: ${player.agility}<br>
+
+Итого: <b>${total}</b><br><br>
+
+✅ Успех!
+`
+);
+
+setTimeout(()=>{
 
 showScene("hideSuccess");
 
+},2200);
+
 }else{
+
+showMessage(
+`
+🎲 Выпало <b>${roll}</b><br><br>
+
+Ловкость: ${player.agility}<br>
+
+Итого: <b>${total}</b><br><br>
+
+❌ Провал!
+`
+);
+
+setTimeout(()=>{
 
 showScene("hideFail");
 
+},2200);
+
 }
 
 }
+
