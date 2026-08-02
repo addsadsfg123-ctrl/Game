@@ -1,3 +1,12 @@
+function showMessage(text){
+
+const box=document.getElementById("messageBox");
+
+box.classList.add("show");
+
+box.innerHTML=text;
+
+}
 function renderPlayer() {
 
 document.getElementById("playerBar").innerHTML = `
