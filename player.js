@@ -1,17 +1,17 @@
 const player = {
 
-name:"Алексей",
+name: "",
 
-hp:20,
+hp: 20,
 
-gold:5,
+gold: 5,
 
-strength:5,
+strength: 5,
 
-agility:5,
+agility: 5,
 
-charisma:5,
+charisma: 5,
 
-inventory:[]
+inventory: []
 
 };
