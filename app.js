@@ -7,6 +7,21 @@ box.classList.add("show");
 box.innerHTML=text;
 
 }
+async function typeText(text){
+
+const story=document.getElementById("story");
+
+story.innerHTML="";
+
+for(let i=0;i<text.length;i++){
+
+story.innerHTML+=text[i];
+
+await new Promise(resolve=>setTimeout(resolve,20));
+
+}
+
+}
 function renderPlayer() {
 
 document.getElementById("playerBar").innerHTML = `
