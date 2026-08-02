@@ -116,51 +116,84 @@ return Math.floor(Math.random()*20)+1;
 }
 function hide(){
 
-const roll=rollDice();
+showMessage("🎲 Кубик брошен...");
 
-const total=roll+player.agility;
+setTimeout(()=>{
 
-if(total>=15){
+
+const roll = diceRoll();
+
+const result = roll + player.agility;
+
+
+if(result >= 15){
+
 
 showMessage(
+
 `
-🎲 Выпало <b>${roll}</b><br><br>
+🎲 Выпало: ${roll}
 
-Ловкость: ${player.agility}<br>
+<br><br>
 
-Итого: <b>${total}</b><br><br>
+🏃 Ловкость: ${player.agility}
 
-✅ Успех!
+<br><br>
+
+Итог: ${result}
+
+<br><br>
+
+✅ Ты остался незамеченным!
+
 `
+
 );
+
 
 setTimeout(()=>{
 
 showScene("hideSuccess");
 
-},2200);
+},2500);
+
 
 }else{
 
+
 showMessage(
+
 `
-🎲 Выпало <b>${roll}</b><br><br>
+🎲 Выпало: ${roll}
 
-Ловкость: ${player.agility}<br>
+<br><br>
 
-Итого: <b>${total}</b><br><br>
+🏃 Ловкость: ${player.agility}
 
-❌ Провал!
+<br><br>
+
+Итог: ${result}
+
+<br><br>
+
+❌ Тебя заметили!
+
 `
+
 );
+
 
 setTimeout(()=>{
 
 showScene("hideFail");
 
-},2200);
+},2500);
+
 
 }
 
-}
 
+},1200);
+
+
+}
