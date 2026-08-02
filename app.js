@@ -37,6 +37,15 @@ await new Promise(resolve => setTimeout(resolve,20));
 }
 
 }
+function addItem(item){
+
+player.inventory.push(item);
+
+showMessage(
+"🎒 Получен предмет: " + item
+);
+
+}
 function renderPlayer() {
 
 document.getElementById("playerBar").innerHTML = `
