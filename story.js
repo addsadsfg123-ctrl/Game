@@ -24,6 +24,14 @@ knife:{
 
 text:"Ты поднимаешь кинжал. На рукояти странный символ.",
 
+
+onEnter:function(){
+
+addItem("Старый кинжал");
+
+},
+
+
 choices:[
 
 {
@@ -33,7 +41,7 @@ next:"street"
 
 ]
 
-},
+}
 
 street:{
 
