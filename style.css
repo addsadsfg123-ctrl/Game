@@ -99,3 +99,32 @@ button:hover{
 background:#6b4a2b;
 
 }
+#messageBox{
+
+margin-top:25px;
+
+padding:20px;
+
+background:#1a1714;
+
+border:1px solid #6d5633;
+
+border-radius:8px;
+
+min-height:60px;
+
+font-size:20px;
+
+color:#d9c48f;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+#messageBox.show{
+
+opacity:1;
+
+}
