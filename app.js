@@ -67,6 +67,11 @@ document.getElementById("playerBar").innerHTML = `
 function showScene(id) {
 
 const scene = STORY[id];
+  if(scene.onEnter){
+
+scene.onEnter();
+
+}
 typeText(scene.text);
 
 let html = "";
