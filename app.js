@@ -26,11 +26,23 @@ let html = "";
 
 scene.choices.forEach(choice => {
 
+if(choice.action){
+
+html += `
+<button onclick="${choice.action}()">
+${choice.text}
+</button>
+`;
+
+}else{
+
 html += `
 <button onclick="showScene('${choice.next}')">
 ${choice.text}
 </button>
 `;
+
+}
 
 });
 
@@ -59,3 +71,28 @@ showScene("start");
 }
 
 startGame();
+function rollDice(){
+
+return Math.floor(Math.random()*20)+1;
+
+}
+
+function hide(){
+
+const roll = rollDice();
+
+alert("🎲 Выпало: " + roll);
+
+const total = roll + player.agility;
+
+if(total >= 15){
+
+showScene("hideSuccess");
+
+}else{
+
+showScene("hideFail");
+
+}
+
+}
